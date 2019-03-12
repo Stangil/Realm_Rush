@@ -179,7 +179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &534669902
 GameObject:
@@ -263,7 +263,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2424993733840438505
+--- !u!1001 &8540546499572031066
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -273,7 +273,7 @@ PrefabInstance:
     - target: {fileID: 6022153000654039042, guid: 1d29963db4fe45347821a339ba804e64,
         type: 3}
       propertyPath: m_Name
-      value: MyCube
+      value: MyCube (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4068675988284140262, guid: 1d29963db4fe45347821a339ba804e64,
         type: 3}
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 4068675988284140262, guid: 1d29963db4fe45347821a339ba804e64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4068675988284140262, guid: 1d29963db4fe45347821a339ba804e64,
         type: 3}
@@ -329,6 +329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502901532174606232, guid: 1d29963db4fe45347821a339ba804e64,
+        type: 3}
+      propertyPath: m_Text
+      value: 0,0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d29963db4fe45347821a339ba804e64, type: 3}
