@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
+    [SerializeField] Color exploredColor;
+    //public ok here because it is data
+    public bool isExplored = false;
+    public Waypoint exploredFrom;
+
     Vector2Int gridPos;
     const int gridSize = 10;
   
@@ -11,8 +16,15 @@ public class Waypoint : MonoBehaviour
     {
         return gridSize;
     }
-
-   public Vector2Int GetGridPos()
+    //Consider setting own color
+    private void Update()//TODO Remove update?
+    {
+        //if (isExplored)
+        //{
+        //    SetTopColor(exploredColor);
+        //}
+    }
+    public Vector2Int GetGridPos()
     {
         return new Vector2Int(
         Mathf.RoundToInt(transform.position.x / gridSize),
