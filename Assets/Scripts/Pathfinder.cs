@@ -11,7 +11,8 @@ public class Pathfinder : MonoBehaviour
     Queue<Waypoint> queue = new Queue<Waypoint>();
     bool isRunning = true;
     Waypoint searchCenter;
-    List<Waypoint> path = new List<Waypoint>(); 
+    List<Waypoint> path = new List<Waypoint>();
+   
 
     Vector2Int[] directions =
     {
@@ -23,10 +24,12 @@ public class Pathfinder : MonoBehaviour
 
     public List<Waypoint> getPath()
     {
-        LoadBlocks();
-        ColorStartAndEnd();//TODO Maybe don't need
-        BreathFirstSearch();
-        CreatePath();
+        if (path.Count == 0)
+        {
+            LoadBlocks();
+            BreathFirstSearch();
+            CreatePath();
+        }
         return path;
     }
 
