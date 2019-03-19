@@ -23,7 +23,7 @@ public class CubeEditor : MonoBehaviour
     private void SnapToGrid()
     {
         int gridSize = waypoint.GetGridSIze();
-        transform.position = new Vector3(waypoint.GetGridPos().x*gridSize, 0f, waypoint.GetGridPos().y*gridSize);
+        transform.position = new Vector3(waypoint.GetGridPos().x*gridSize, 10f, waypoint.GetGridPos().y*gridSize);
     }
 
     private void UpdateLabel()

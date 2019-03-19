@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
-    [SerializeField] int hitPoints = 100;
+    [SerializeField] int hitPoints = 30;
     private void OnParticleCollision(GameObject other)
     {
+       
         ProcessHit();
         if (hitPoints < 1)
         {
@@ -16,6 +17,7 @@ public class EnemyDamage : MonoBehaviour
 
     void ProcessHit()
     {
+        
         hitPoints = hitPoints - 1;      
     }
     void ProcessDeath()

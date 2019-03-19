@@ -12,6 +12,7 @@ public class Waypoint : MonoBehaviour
     Vector2Int gridPos;
     const int gridSize = 10;
   
+
     public int GetGridSIze()
     {
         return gridSize;
