@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4068675988284140262}
   - component: {fileID: 2490105467864226870}
   - component: {fileID: 8648374028694006485}
+  - component: {fileID: 7730613825513112122}
   m_Layer: 0
   m_Name: MyCube
   m_TagString: Untagged
@@ -151,9 +152,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf70c24d46843f46a4c9855ba0b467a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exploredColor: {r: 0.9433962, g: 0.37824848, b: 0.85249406, a: 0}
+  tower: {fileID: 3958738251510596259, guid: 9728b8dc2079a7149ae27cc31f4a7b23, type: 3}
   isExplored: 0
+  isPlaceable: 1
   exploredFrom: {fileID: 0}
+--- !u!65 &7730613825513112122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6022153000654039042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5, z: 0}
 --- !u!1 &6575079899158905991
 GameObject:
   m_ObjectHideFlags: 0
