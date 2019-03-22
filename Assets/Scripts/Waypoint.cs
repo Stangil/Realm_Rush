@@ -1,12 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Waypoint : MonoBehaviour
 {
-    [SerializeField] Tower tower;
-   // [SerializeField] Color exploredColor;
-    //public ok here because it is data
     public bool isExplored = false;
     public bool isPlaceable = true;
     
@@ -14,8 +9,6 @@ public class Waypoint : MonoBehaviour
 
     Vector2Int gridPos;
     const int gridSize = 10;
-
-  
 
     public int GetGridSIze()
     {
@@ -33,10 +26,7 @@ public class Waypoint : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isPlaceable)
         {
-           // Debug.Log(gameObject.name+ " Is clicked");
-            Instantiate(tower, transform.position, Quaternion.identity);
-            isPlaceable = false;
+            FindObjectOfType<TowerFactory>().AddTower(this);
         }
     }
-
 }

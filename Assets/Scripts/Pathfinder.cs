@@ -13,7 +13,6 @@ public class Pathfinder : MonoBehaviour
     Waypoint searchCenter;
     List<Waypoint> path = new List<Waypoint>();
    
-
     Vector2Int[] directions =
     {
         Vector2Int.up,
@@ -87,21 +86,12 @@ public class Pathfinder : MonoBehaviour
     private void QueueNewNeighbors(Vector2Int neighborCoordinates)
     {
         Waypoint neighbor = grid[neighborCoordinates];
-        if (neighbor.isExplored || queue.Contains(neighbor))
-        {
-           // neighbor.SetTopColor(Color.grey);
-        }
+        if (neighbor.isExplored || queue.Contains(neighbor)){}
         else
         {
             queue.Enqueue(neighbor);
             neighbor.exploredFrom = searchCenter;
         }
-    }
-
-    private void ColorStartAndEnd()//TODO Consider moving to Waypoint
-    {
-        //startWaypoint.SetTopColor(Color.green);
-        //endWaypoint.SetTopColor(Color.red);
     }
 
     private void LoadBlocks()
@@ -120,5 +110,4 @@ public class Pathfinder : MonoBehaviour
             }
         }
     }
-
 }
