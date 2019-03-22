@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int health = 100;
     [SerializeField] int damagePerHit = 10;
     [SerializeField] Text healthText;
+    [SerializeField] AudioClip damage;
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       health -= damagePerHit;
+        GetComponent<AudioSource>().PlayOneShot(damage);
+        health -= damagePerHit;
        healthText.text = health.ToString();
         if (health < 1)
         {         
